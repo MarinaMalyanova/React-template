@@ -2,7 +2,7 @@ import logo from './logo.svg';
 import './App.css';
 
 export const App = () => {
-	const currentYear = new Date().getFullYear(); // императивный
+	const currentYear = new Date().getFullYear(); // императивный стиль
 	return (
 		// декларативный стиль
 		<div className="App">
