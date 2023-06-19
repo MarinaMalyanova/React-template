@@ -31,30 +31,6 @@
 // }
 import { useState } from 'react';
 import styles from './MyComponent.module.css';
-const getTimeFromDate = (date) => date.toISOString().substring(11, 19);
-export const MyComp = () => {
-	// Хук useState принимает как параметр начальное состояние (currentDate)
-	// А возвращает фук всегда массив из двух элементов - актуальное значение состояния и функцию для установки нового значения состояния
-	const [currentDate, setCurrentDate] = useState(new Date());
-	// let currentDate = new Date();
-
-	//Состояние компонента - данные, которые актуальны в определенный момент времени. При изменеии состояния, компонент сразу перерисовывается
-
-	setTimeout(() => {
-		// Аргументом передаем новое значение (вызов new Date вернет текущее время)
-		setCurrentDate(new Date());
-	}, 1000);
-	const onClick = () => {
-		console.log('123')
-	}
-	return (
-		<>
-	<div>
-		{getTimeFromDate(currentDate)}
-	</div>
-	<button onClick={onClick}>Нажми</button>
-	</>)
-}
 
 const numbers = [
 	{ id: 'rty', num: '1'},
